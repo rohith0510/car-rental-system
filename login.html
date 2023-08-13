@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f2f2;
+    }
+    
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #555;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+    }
+
+    .container input[type=email],
+    .container input[type=password] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .container button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .container button:hover {
+      background-color: #45a049;
+    }
+
+    .container .message {
+      margin-top: 20px;
+      color: #555;
+    }
+
+    .container .message a {
+      text-decoration: none;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.jpeg" alt="Logo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="signup.html">Signup</a>
+      <a href="login.html">Login</a>
+      <a href="management.html">Manage Booking</a>
+      <a href="popular.html">Popular Locations</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    <button type="button" onclick="login()">Login</button>
+    <div class="message">
+      Not registered? <a href="#">Create an account</a>
+    </div>
+  </div>
+  <!-- JavaScript code -->
+  <script>
+    function login() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Basic validation
+      if (email.trim() === "" || password.trim() === "") {
+        alert("Email and password are required");
+        return;
+      }
+
+      // Login logic
+      if (email === email && password === password) {
+        alert("Login successful!\nEmail: " + email + "\nPassword: " + password);
+        errorMessage.textContent = "";
+      } else {
+        errorMessage.textContent = "Invalid email or password";
+      }
+    }
+  </script>
+</body>
+</html>

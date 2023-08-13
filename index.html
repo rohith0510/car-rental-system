@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="coverphoto">
+        <a href="index.html"><img src="logo.jpeg" alt="Logo"></a>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="management.html">Manage Booking</a>
+            <a href="popular.html">Popular Locations</a>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <h2>LET'S FIND YOUR IDEAL CAR</h2>
+        <!-- Car search form -->
+        <form action="availablecars.html" method="GET">
+            <div class="input-group">
+                <label for="pickup-location">PICK UP LOCATION</label>
+                <select id="pickup-location" name="pickup-location" required>
+                    <option disabled selected value="">Select a location</option>
+                    <option>Location 1</option>
+                    <option>Location 2</option>
+                    <option>Location 3</option>
+                    <option>Location 4</option>
+                    <option>Location 5</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="pickup-date">PICK UP DATE</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="drop-off-date">DROP OFF DATE</label>
+                <input type="date" id="drop-off-date" name="drop-off-date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="rental-purpose">PURPOSE OF RENTAL</label>
+                <label><input type="radio" name="rental-purpose" value="business" required> BUSINESS</label>
+                <label><input type="radio" name="rental-purpose" value="leisure" required> LEISURE</label>
+            </div>
+
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </section>
+    
+    <!-- Section displaying popular destinations -->
+    <h2 class="section-heading">OUR MOST POPULAR DESTINATIONS</h2>
+    <section class="popular-destinations">
+        <!-- Destination 1 -->
+        <div class="destination">
+            <div class="destination-image">
+                <img src="agra.jpg" alt="Destination Image">
+            </div>
+            <div class="destination-details">
+                <h3>Agra</h3>
+                <p class="destination-description">Marvel at the architectural masterpiece, the Taj Mahal, in Agra. This ivory-white marble mausoleum is a symbol of eternal love and a UNESCO World Heritage site. Explore the grandeur of Agra Fort and savor the delectable Mughlai cuisine.</p>
+                <ul class="destination-highlights">
+                    <li>Marvel at the magnificent Taj Mahal, one of the Seven Wonders of the World.</li>
+                    <li>Explore the grandeur of Agra Fort and its beautiful palaces and gardens.</li>
+                    <li>Enjoy a view of the Taj Mahal from Mehtab Bagh during sunset.</li>
+                </ul>
+                <a href="agra.html" class="book-now-button">Book Now</a>
+            </div>
+        </div>
+        
+        <!-- Destination 2 -->
+        <div class="destination">
+            <div class="destination-image">
+                <img src="goa.jpg" alt="Destination Image">
+            </div>
+            <div class="destination-details">
+                <h3>Goa</h3>
+                <p class="destination-description">Explore the sun-soaked beaches and vibrant nightlife of Goa. This coastal paradise offers a perfect blend of relaxation and adventure with its pristine sandy shores, water sports activities, and bustling markets.</p>
+                <ul class="destination-highlights">
+                    <li>Relax on the pristine beaches of Goa, such as Baga Beach, Calangute Beach, and Anjuna Beach.</li>
+                    <li>Enjoy water sports activities like jet skiing, parasailing, and banana boat rides.</li>
+                    <li>Indulge in delicious seafood and Goan cuisine.</li>
+                </ul>
+                <a href="goa.html" class="book-now-button">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; Car Rental System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
