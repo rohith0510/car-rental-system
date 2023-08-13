@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles for the page */
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Form styles */
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .signup-container {
+      padding: 16px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    @media screen and (max-width: 300px) {
+      /* Responsive styles for smaller screens */
+      input[type=text],
+      input[type=password] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+        <a href="index.html"><img src="logo.jpeg" alt="Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="management.html">Manage Booking</a>
+            <a href="popular.html">Popular Locations</a>
+        </nav>
+    </header>
+  <h2>Signup Form</h2>
+  <div class="signup-container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+    <label for="password-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" required>
+
+    <div class="clearfix">
+      <button type="button" onclick="resetForm()">Reset</button>
+      <button type="button" onclick="signUp()">Sign Up</button>
+    </div>
+  </div>
+
+  <script>
+    function resetForm() {
+      // Function to reset form inputs
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+      document.getElementById("password-repeat").value = "";
+    }
+
+    function signUp() {
+      // Function to handle signup logic
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var passwordRepeat = document.getElementById("password-repeat").value;
+
+      console.log("Email:", email);
+      console.log("Password:", password);
+      console.log("Password Repeat:", passwordRepeat);
+
+      // You can redirect or display a success message after the signup logic
+      alert("Signup successful!");
+    }
+  </script>
+</body>
+</html>

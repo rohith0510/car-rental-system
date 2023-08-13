@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Page</title>
+    <link rel="stylesheet" type="text/css" href="abc.css">
+    <style type="text/css">
+        /* Header styles */
+        header {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        header img {
+          height: 40px;
+        }
+
+        nav a {
+          color: #fff;
+          text-decoration: underline;
+          margin-left: 20px;
+          font-weight: bold;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #555;
+        }
+
+        h1 {
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .custom-select {
+            margin-bottom: 20px;
+        }
+
+        .select-label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .select-dropdown {
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .select-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 99;
+            display: none;
+        }
+
+        .custom-select.open .select-options {
+            display: block;
+        }
+
+        .select-option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .select-option:hover {
+            background-color: #e0e0e0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #ff8c00;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.jpeg" alt="Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="management.html">Manage Booking</a>
+            <a href="popular.html">Popular Locations</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>POPULAR LOCATIONS</h1>
+        <div class="custom-select">
+            <label class="select-label">STATES</label>
+            <select class="select-dropdown">
+                <option value="0">STATES</option>
+                <option value="1">New York</option>
+                <option value="2">California</option>
+                <option value="3">Texas</option>
+                <option value="4">Florida</option>
+                <option value="5">India</option> <!-- Add India as an option -->
+            </select>
+        </div>
+        <div class="custom-select">
+            <label class="select-label">DISTRICTS</label>
+            <select class="select-dropdown">
+                <option value="0">DISTRICTS</option>
+                <option value="1">Manhattan</option>
+                <option value="2">Los Angeles County</option>
+                <option value="3">Harris County</option>
+                <option value="4">Miami-Dade County</option>
+                <option value="5">Delhi</option> 
+                <option value="6">Mumbai</option> 
+                <option value="7">Kolkata</option> 
+            </select>
+        </div>
+        <div class="custom-select">
+            <label class="select-label">CITIES</label>
+            <select class="select-dropdown">
+                <option value="0">CITIES</option>
+                <option value="1">New York City</option>
+                <option value="2">Los Angeles</option>
+                <option value="3">Houston</option>
+                <option value="4">Miami</option>
+                <option value="5">New Delhi</option> 
+                <option value="6">Mumbai City</option> 
+                <option value="7">Kolkata City</option> 
+            </select>
+        </div>
+        <div class="custom-select">
+            <label class="select-label">CAR RANGE</label>
+            <select class="select-dropdown">
+                <option value="0">CAR RANGE</option>
+                <option value="1">Economy</option>
+                <option value="2">Midsize</option>
+                <option value="3">SUV</option>
+                <option value="4">Luxury</option>
+            </select>
+        </div>
+        <button onclick="alert('Submission Success')">Submit</button>
+    </div>
+</body>
+</html>

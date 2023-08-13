@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Page</title>
+    <link rel="stylesheet" type="text/css" href="abc.css">
+    <style type="text/css">
+        /* Add any additional CSS styles here */
+
+        /* Body styles */
+        body {
+            background-image: url("car.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #555;
+        }
+
+        h1 {
+            color: #ff8c00;
+            text-align: center;
+        }
+
+        /* Select styles */
+        .select-style {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .select-style select {
+            display: none;
+        }
+
+        .select-style::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #000;
+            pointer-events: none;
+        }
+
+        .select-style select:focus + .select-style::after {
+            border-top-color: #ccc;
+        }
+
+        /* Button styles */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #ff8c00;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+        }
+
+        .select-style select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            appearance: none; /* For removing default arrow in Chrome */
+            -webkit-appearance: none; /* For removing default arrow in Chrome */
+            -moz-appearance: none; /* For removing default arrow in Firefox */
+            background-color: #fff;
+            font-size: 16px;
+            font-weight: normal;
+            color: #555;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.jpeg" alt="Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="management.html">Manage Booking</a>
+            <a href="popular.html">Popular Locations</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>MANAGEMENT BOOKING</h1>
+        <div class="select-style">
+            <select>
+                <option value="0">Select Car:</option>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+            </select>
+        </div>
+        <div class="select-style">
+            <select>
+                <option value="0">Car capacity:</option>
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+            </select>
+        </div>
+        <div class="select-style">
+            <select>
+                <option value="0">Car rate:</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+        </div>
+        <div class="select-style">
+            <select>
+                <option value="0">Car range:</option>
+                <option value="1">Short Range</option>
+                <option value="2">Medium Range</option>
+                <option value="3">Long Range</option>
+            </select>
+        </div>
+        <button onclick="alert('Submission is required')">Submit</button>
+    </div>
+</body>
+</html>
